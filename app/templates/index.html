@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+<p style="font-size:30px"><strong>{{content}}</strong></p>
+<p style="font-size:20px"><strong>{{entry}}</strong></p>
+<form action="#" method="post">
+    <strong><p>Name:</p></strong>
+    <p><input type="text" name="nm" placeholder="Enter Name" /></p>
+    <strong><p>Points:</p></strong>
+    <p><input type="text" name="pts" placeholder="Enter Points"/></p>
+    <p><input type="submit" name="submit" /></p>
+</form>
+{% if error %}
+<p style="font-size:20px; color:red;">{{error}}</p>
+{% endif %}
+{% endblock %}

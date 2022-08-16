@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="vp" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet"/>
+    <title>{% block title %} Home Page {% endblock %}</title>
+</head>
+<body style="margin: 0;">
+<div align="center" class="bg">
+    <nav>
+        <a href="/"><img src="{{ url_for('static', filename='images/menu.png') }}" class="menu-img" ></a>
+        <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" ></a>
+        <ul>
+            <button><a href="/create">Create</a></button>
+            <button><a href="/read">Read</a></button>
+            <button><a href="/update">Update</a></button>
+            <button><a href="/delete">Delete</a></button>
+            <button><a href="/readall">Read All</a></button>
+        </ul>
+    </nav>
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>

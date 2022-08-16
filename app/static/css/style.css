@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg{
+    background: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+nav .menu-img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .logo{
+    width: 160px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul button{
+    background-color: #1d2026; /* Green */
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul button a{
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 15px;
+}
+nav ul button a:hover{
+    background-color: #171a1f;
+}
+
+input[type=text] {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background: url('../images/search.png') no-repeat scroll 3px 3px;
+    padding-left:30px;
+    width:20%;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 12px 20px 12px 40px;
+    background-color: #fff;
+    display: inline;
+}
+#entries {
+    top: -20px 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 35%;
+  }
+  
+#entries td, #entries th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#entries tr:nth-child(even){background-color: #88838381;}
+
+#entries tr:hover {background-color: rgba(218, 243, 172, 0.493);}
+
+#entries th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+input:focus{
+    border:2px solid #000;
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+}
+tagname:empty {
+    display: none;
+}
+p{
+    padding:7px;
+}

@@ -1,0 +1,25 @@
+{% extends "view.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<strong><p style="font-size:20px">{{result}}</p></strong>
+<table id="entries">
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th>ID</th>
+    </tr>
+    {% for item in values %}
+    <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.points}}</td>
+        <td>{{item._id}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{{not_found}}
+{% for item in not_found_entries %}
+    <p>{{item}}</p>
+{% endfor %}
+{% endblock%}

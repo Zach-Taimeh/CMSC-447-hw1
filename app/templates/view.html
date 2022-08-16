@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<form action="#" method="post">
+    <strong><p style="font-size:30px"><strong>{{content}}</p>
+    <p>Enter an ID:</p></strong>
+    <p><input type="text" name="id" placeholder="Enter Id(s) e.g. 626, 211, 122" /></p>
+    <strong><p>Name:</p></strong>
+    <p><input type="text" name="nm" placeholder="Enter Name" /></p>
+    <p><input type="submit" name="submit" style="margin-bottom: 50;"/></p>
+
+</form>
+    {% if values %}
+    <strong><p style="font-size:20px">{{result}}</p></strong>
+    <table id="entries">
+        <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Points</th>
+            <th>ID</th>
+        </tr>
+        {% for item in values %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.points}}</td>
+            <td>{{item._id}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    {{not_found}}
+    {% for item in not_found_entries %}
+        <p>Id: {{item}}</p>
+    {% endfor %}
+
+{% endblock%}
